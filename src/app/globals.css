@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -23,4 +23,407 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+
+@import "tailwindcss";
+
+
+/*
+==================================================
+ DESIGN TOKENS
+ سیستم رنگ پروژه
+==================================================
+*/
+
+
+:root {
+
+
+/*
+==================================================
+ BRAND
+ رنگ‌های هویت برند
+==================================================
+
+استفاده:
+- Logo
+- Primary Button
+- Main CTA
+- عناصر مهم برند
+
+مثال:
+
+<button class="bg-brand-primary">
+  Create Alert
+</button>
+
+*/
+
+
+--color-brand-primary: #D4AF37;
+/* طلایی اصلی برند */
+
+
+--color-brand-primary-hover: #A67C00;
+/* حالت hover دکمه‌ها */
+
+
+--color-brand-primary-soft: #F4D77A;
+/* پس زمینه‌های طلایی ملایم */
+
+
+
+
+
+/*
+==================================================
+ MARKET
+ رنگ‌های مخصوص اطلاعات بازار
+==================================================
+
+استفاده:
+- قیمت بالا رفت
+- قیمت پایین آمد
+- هشدار قیمت
+
+مثال:
+
+<span class="text-market-positive">
+ +2.5%
+</span>
+
+*/
+
+
+--color-market-positive: #16A34A;
+/* افزایش قیمت، سود، رشد */
+
+
+--color-market-positive-bg: #DCFCE7;
+/* پس زمینه رشد */
+
+
+--color-market-negative: #DC2626;
+/* کاهش قیمت، ضرر */
+
+
+--color-market-negative-bg: #FEE2E2;
+/* پس زمینه کاهش */
+
+
+--color-market-alert: #F59E0B;
+/* هشدار رسیدن قیمت */
+
+
+--color-market-alert-bg: #FEF3C7;
+/* پس زمینه هشدار */
+
+
+
+
+
+/*
+==================================================
+ SURFACE
+ رنگ سطوح رابط کاربری
+==================================================
+
+Surface یعنی هر چیزی که روی صفحه قرار می‌گیرد:
+
+- صفحه
+- کارت
+- پنل
+- Modal
+
+*/
+
+
+--color-surface-page: #FAFAF9;
+/* پس زمینه اصلی سایت */
+
+
+--color-surface-card: #FFFFFF;
+/* کارت‌ها:
+
+Price Card
+Dashboard Card
+Table
+*/
+
+
+--color-surface-section: #F8FAFC;
+/* بخش‌های بزرگ:
+
+Hero
+Features
+Footer
+*/
+
+
+
+
+
+/*
+==================================================
+ TEXT
+ رنگ نوشته‌ها
+==================================================
+
+*/
+
+
+--color-text-primary: #111827;
+/* تیترها:
+
+h1
+h2
+Card Title
+*/
+
+
+--color-text-secondary: #374151;
+/* متن معمولی:
+
+paragraph
+description
+*/
+
+
+--color-text-muted: #6B7280;
+/* متن کم اهمیت:
+
+date
+placeholder
+caption
+*/
+
+
+
+
+
+/*
+==================================================
+ BORDER
+ خطوط و جداکننده‌ها
+==================================================
+
+*/
+
+
+--color-border-default: #E5E7EB;
+/*
+Card border
+Input border
+Divider
+*/
+
+
+
+
+
+/*
+==================================================
+ STATUS
+ وضعیت‌های عمومی سیستم
+==================================================
+
+*/
+
+
+--color-status-success: #22C55E;
+/*
+موفقیت:
+
+Alert created
+Payment success
+*/
+
+
+--color-status-error: #EF4444;
+/*
+خطا:
+
+API error
+Validation error
+*/
+
+
+--color-status-info: #3B82F6;
+/*
+اطلاعات:
+
+Tooltip
+Info message
+*/
+
+
+
+/*
+==================================================
+ DARK MODE VALUES
+==================================================
+*/
+
+
+--dark-surface-page: #0F172A;
+
+--dark-surface-card: #1E293B;
+
+--dark-surface-section: #111827;
+
+
+--dark-text-primary: #F8FAFC;
+
+--dark-text-secondary: #E5E7EB;
+
+--dark-text-muted: #94A3B8;
+
+
+--dark-border-default: #334155;
+
+
+
+}
+
+
+
+
+
+/*
+==================================================
+ TAILWIND v4 CONNECTION
+ تبدیل Variable ها به کلاس Tailwind
+==================================================
+*/
+
+
+@theme inline {
+
+
+--color-brand-primary: var(--color-brand-primary);
+
+--color-brand-primary-hover:
+var(--color-brand-primary-hover);
+
+--color-brand-primary-soft:
+var(--color-brand-primary-soft);
+
+
+
+--color-market-positive:
+var(--color-market-positive);
+
+--color-market-negative:
+var(--color-market-negative);
+
+--color-market-alert:
+var(--color-market-alert);
+
+
+
+--color-surface-page:
+var(--color-surface-page);
+
+--color-surface-card:
+var(--color-surface-card);
+
+--color-surface-section:
+var(--color-surface-section);
+
+
+
+--color-text-primary:
+var(--color-text-primary);
+
+--color-text-secondary:
+var(--color-text-secondary);
+
+--color-text-muted:
+var(--color-text-muted);
+
+
+
+--color-border-default:
+var(--color-border-default);
+
+
+
+--color-status-success:
+var(--color-status-success);
+
+--color-status-error:
+var(--color-status-error);
+
+--color-status-info:
+var(--color-status-info);
+
+}
+
+
+
+
+/*
+==================================================
+ DARK MODE
+ فعال شدن با class="dark"
+==================================================
+*/
+
+
+.dark {
+
+
+--color-surface-page:
+var(--dark-surface-page);
+
+
+--color-surface-card:
+var(--dark-surface-card);
+
+
+--color-surface-section:
+var(--dark-surface-section);
+
+
+
+--color-text-primary:
+var(--dark-text-primary);
+
+
+--color-text-secondary:
+var(--dark-text-secondary);
+
+
+--color-text-muted:
+var(--dark-text-muted);
+
+
+
+--color-border-default:
+var(--dark-border-default);
+
+
+}
+
+
+
+
+/*
+==================================================
+ GLOBAL
+==================================================
+*/
+
+
+body {
+
+background:
+var(--color-surface-page);
+
+
+color:
+var(--color-text-secondary);
+
+
 }
