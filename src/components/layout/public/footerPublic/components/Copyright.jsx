@@ -1,14 +1,13 @@
-import React from 'react'
 
 export default function Copyright() {
   return (
-     <div>
-      <p  className="text-market-up">
-     © .تمامی حقوق مادی و معنوی این سایت محفوظ است
+    <div
+      className="text-text-secondary pt-2 pb-4 mr-20 ml-20 border-t border-border-default"
+    >
+      <p className="text-text-muted text-sm text-center">
+        © تمامی حقوق مادی و معنوی این سایت محفوظ است؛ هرگونه کپی‌برداری ممنوع و
+        مشمول پیگرد قانونی است.
       </p>
-<span className="text-market-positive">
-+1.8%
-</span>
     </div>
-  )
+  );
 }
