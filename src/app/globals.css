@@ -317,7 +317,7 @@ Surface یعنی هر چیزی که روی صفحه قرار می‌گیرد:
 --color-surface-card: #FFFFFF;
 /* کارت‌ها */
 
---color-surface-section: #F1F3F5;
+--color-surface-section: #f2f3f600;
 /* بخش‌های بزرگ صفحه */
 
 --color-surface-elevated: #FFFFFF;
@@ -466,7 +466,7 @@ Border نباید بیش از حد پررنگ باشد.
 --dark-text-secondary: #CBD5E1;
 /* متن ثانویه Dark */
 
---dark-text-muted: #94A3B8;
+--dark-text-muted: #939ca8;
 /* متن کم‌اهمیت Dark */
 
 --dark-text-disabled: #64748B;
