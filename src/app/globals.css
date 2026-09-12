@@ -1,38 +1,27 @@
-/* @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-} */
-
-
 @import "tailwindcss";
 
 
 /*
 ==================================================
  DESIGN TOKENS
- سیستم رنگ پروژه
+ سیستم رنگ پروژه MarketController
+==================================================
+
+Brand:
+- Indigo = هویت اصلی محصول
+- Gold = هویت بازار طلا و Accent
+
+Product:
+- Market
+- AI
+- Analysis
+- Alerts
+- Multi-market
+
+هدف:
+ساخت یک Design System حرفه‌ای، مدرن و قابل توسعه
+برای یک پلتفرم Market Intelligence و تحلیل بازار.
+
 ==================================================
 */
 
@@ -43,36 +32,75 @@ body {
 /*
 ==================================================
  BRAND
- رنگ‌های هویت برند
+ رنگ‌های اصلی هویت برند
 ==================================================
 
 استفاده:
 - Logo
 - Primary Button
 - Main CTA
-- عناصر مهم برند
+- Active Navigation
+- مهم‌ترین عناصر تعاملی
 
-مثال:
+Primary دیگر طلایی نیست.
 
-<button class="bg-brand-primary">
-  Create Alert
-</button>
+Indigo به عنوان رنگ اصلی برند انتخاب شده
+تا محصول از ظاهر سنتی پلتفرم‌های مالی
+و کپی‌های TradingView فاصله بگیرد.
 
+==================================================
 */
 
 
---color-brand-primary: #D4AF37;
-/* طلایی اصلی برند */
+--color-brand-primary: #6366F1;
+/* رنگ اصلی برند */
+
+--color-brand-primary-hover: #4F46E5;
+/* Hover برای عناصر Primary */
+
+--color-brand-primary-active: #4338CA;
+/* Active / Pressed */
+
+--color-brand-primary-soft: #EEF2FF;
+/* پس‌زمینه بسیار ملایم برند */
+
+--color-brand-primary-subtle: #E0E7FF;
+/* پس‌زمینه ملایم‌تر برای Badge و State */
 
 
---color-brand-primary-hover: #A67C00;
-/* حالت hover دکمه‌ها */
+
+/*
+==================================================
+ GOLD ACCENT
+ رنگ اختصاصی بازار طلا
+==================================================
+
+استفاده:
+- Gold Market
+- Gold Price
+- Gold-related indicators
+- Accent
+- Iconهای مرتبط با طلا
+- بخش‌های اختصاصی Gold
+
+نکته:
+طلایی Accent است، نه Primary.
+
+==================================================
+*/
 
 
---color-brand-primary-soft: #F4D77A;
-/* پس زمینه‌های طلایی ملایم */
+--color-accent-gold: #D4AF37;
+/* طلایی اصلی */
 
+--color-accent-gold-hover: #B8941F;
+/* Hover طلایی */
 
+--color-accent-gold-soft: #F8F1D7;
+/* پس‌زمینه ملایم طلایی */
+
+--color-accent-gold-muted: #E8DFAF;
+/* طلایی کم‌رنگ برای Border / Divider */
 
 
 
@@ -85,41 +113,182 @@ body {
 استفاده:
 - قیمت بالا رفت
 - قیمت پایین آمد
-- هشدار قیمت
+- سود
+- ضرر
+- تغییرات بازار
+- نمودار
+- Market Cards
 
-مثال:
+این رنگ‌ها باید در کل محصول ثابت باشند.
 
-<span class="text-market-positive">
- +2.5%
-</span>
-
+==================================================
 */
 
 
---color-market-positive: #16A34A;
+--color-market-positive: #22C55E;
 /* افزایش قیمت، سود، رشد */
 
+--color-market-positive-hover: #16A34A;
+/* Hover وضعیت مثبت */
 
 --color-market-positive-bg: #DCFCE7;
-/* پس زمینه رشد */
+/* پس‌زمینه وضعیت مثبت */
+
+--color-market-positive-text: #15803D;
+/* متن وضعیت مثبت روی Background روشن */
 
 
---color-market-negative: #DC2626;
-/* کاهش قیمت، ضرر */
+--color-market-negative: #EF4444;
+/* کاهش قیمت، ضرر، افت */
 
+--color-market-negative-hover: #DC2626;
+/* Hover وضعیت منفی */
 
 --color-market-negative-bg: #FEE2E2;
-/* پس زمینه کاهش */
+/* پس‌زمینه وضعیت منفی */
+
+--color-market-negative-text: #B91C1C;
+/* متن وضعیت منفی روی Background روشن */
 
 
---color-market-alert: #F59E0B;
-/* هشدار رسیدن قیمت */
+--color-market-neutral: #64748B;
+/* وضعیت خنثی / بدون تغییر */
+
+--color-market-neutral-bg: #F1F5F9;
+/* پس‌زمینه وضعیت خنثی */
 
 
---color-market-alert-bg: #FEF3C7;
-/* پس زمینه هشدار */
+
+/*
+==================================================
+ ALERT
+ هشدارهای مربوط به بازار
+==================================================
+
+استفاده:
+- Price Alert
+- Target Reached
+- Notification
+- Warning
+- Threshold
+
+==================================================
+*/
 
 
+--color-alert-warning: #F59E0B;
+/* هشدار */
+
+--color-alert-warning-hover: #D97706;
+/* Hover هشدار */
+
+--color-alert-warning-bg: #FEF3C7;
+/* پس‌زمینه هشدار */
+
+--color-alert-warning-text: #B45309;
+/* متن هشدار */
+
+
+
+/*
+==================================================
+ AI
+ رنگ‌های اختصاصی قابلیت‌های هوش مصنوعی
+==================================================
+
+استفاده:
+- AI Insights
+- AI Analysis
+- AI Signals
+- AI Recommendations
+- AI Badge
+
+AI از Primary جدا نگه داشته شده
+تا کاربر بتواند قابلیت‌های هوشمند را
+به‌صورت بصری تشخیص دهد.
+
+==================================================
+*/
+
+
+--color-ai-primary: #8B5CF6;
+/* رنگ اصلی AI */
+
+--color-ai-hover: #7C3AED;
+/* Hover AI */
+
+--color-ai-soft: #F3E8FF;
+/* پس‌زمینه AI */
+
+--color-ai-text: #6D28D9;
+/* متن AI */
+
+
+
+/*
+==================================================
+ ANALYSIS
+ رنگ‌های مخصوص تحلیل و داده
+==================================================
+
+استفاده:
+- Technical Analysis
+- Indicators
+- Signals
+- Analysis Cards
+- Data Visualization
+
+==================================================
+*/
+
+
+--color-analysis-primary: #06B6D4;
+/* رنگ اصلی Analysis */
+
+--color-analysis-hover: #0891B2;
+/* Hover Analysis */
+
+--color-analysis-soft: #CFFAFE;
+/* پس‌زمینه Analysis */
+
+--color-analysis-text: #0E7490;
+/* متن Analysis */
+
+
+
+/*
+==================================================
+ MULTI-MARKET
+ رنگ‌های مربوط به بازارهای مختلف
+==================================================
+
+استفاده:
+- Gold
+- Silver
+- Crypto
+- Forex
+- Other Markets
+
+برای جلوگیری از شلوغی بصری،
+این رنگ‌ها فقط برای دسته‌بندی بازارها
+استفاده شوند و جایگزین رنگ‌های
+Positive / Negative نشوند.
+
+==================================================
+*/
+
+
+--color-market-gold: #D4AF37;
+/* Gold */
+
+--color-market-silver: #94A3B8;
+/* Silver */
+
+--color-market-crypto: #F97316;
+/* Crypto */
+
+--color-market-forex: #06B6D4;
+/* Forex */
 
 
 
@@ -131,36 +300,31 @@ body {
 
 Surface یعنی هر چیزی که روی صفحه قرار می‌گیرد:
 
-- صفحه
-- کارت
-- پنل
+- Page
+- Card
+- Panel
 - Modal
+- Dropdown
+- Table
 
+==================================================
 */
 
 
---color-surface-page: #FAFAF9;
-/* پس زمینه اصلی سایت */
-
+--color-surface-page: #F7F8FA;
+/* پس‌زمینه اصلی سایت */
 
 --color-surface-card: #FFFFFF;
-/* کارت‌ها:
+/* کارت‌ها */
 
-Price Card
-Dashboard Card
-Table
-*/
+--color-surface-section: #F1F3F5;
+/* بخش‌های بزرگ صفحه */
 
+--color-surface-elevated: #FFFFFF;
+/* عناصر شناور و Elevated */
 
---color-surface-section: #F8FAFC;
-/* بخش‌های بزرگ:
-
-Hero
-Features
-Footer
-*/
-
-
+--color-surface-overlay: rgba(15, 23, 42, 0.08);
+/* Overlay */
 
 
 
@@ -170,35 +334,34 @@ Footer
  رنگ نوشته‌ها
 ==================================================
 
+Hierarchy:
+
+Primary
+Secondary
+Muted
+
+این ساختار باعث می‌شود UI
+بدون استفاده بیش از حد از رنگ
+خوانایی و Hierarchy خوبی داشته باشد.
+
+==================================================
 */
 
 
 --color-text-primary: #111827;
-/* تیترها:
+/* تیترها و متن‌های اصلی */
 
-h1
-h2
-Card Title
-*/
+--color-text-secondary: #475569;
+/* متن معمولی و توضیحات */
 
+--color-text-muted: #64748B;
+/* متن کم‌اهمیت */
 
---color-text-secondary: #374151;
-/* متن معمولی:
+--color-text-disabled: #94A3B8;
+/* متن Disabled */
 
-paragraph
-description
-*/
-
-
---color-text-muted: #6B7280;
-/* متن کم اهمیت:
-
-date
-placeholder
-caption
-*/
-
-
+--color-text-inverse: #FFFFFF;
+/* متن روی Background تیره یا Primary */
 
 
 
@@ -208,17 +371,29 @@ caption
  خطوط و جداکننده‌ها
 ==================================================
 
+استفاده:
+- Card Border
+- Input Border
+- Divider
+- Table Border
+
+Border نباید بیش از حد پررنگ باشد.
+
+==================================================
 */
 
 
---color-border-default: #E5E7EB;
-/*
-Card border
-Input border
-Divider
-*/
+--color-border-default: #E2E8F0;
+/* Border اصلی */
 
+--color-border-subtle: #F1F5F9;
+/* Border بسیار ملایم */
 
+--color-border-strong: #CBD5E1;
+/* Border پررنگ */
+
+--color-border-focus: #6366F1;
+/* Focus Ring / Input Focus */
 
 
 
@@ -228,72 +403,122 @@ Divider
  وضعیت‌های عمومی سیستم
 ==================================================
 
+این رنگ‌ها مربوط به وضعیت سیستم هستند
+و با Market Positive / Negative تفاوت مفهومی دارند.
+
+==================================================
 */
 
 
 --color-status-success: #22C55E;
-/*
-موفقیت:
+/* موفقیت */
 
-Alert created
-Payment success
-*/
+--color-status-success-bg: #DCFCE7;
+/* پس‌زمینه موفقیت */
 
 
 --color-status-error: #EF4444;
-/*
-خطا:
+/* خطا */
 
-API error
-Validation error
-*/
+--color-status-error-bg: #FEE2E2;
+/* پس‌زمینه خطا */
 
 
 --color-status-info: #3B82F6;
-/*
-اطلاعات:
+/* اطلاعات */
 
-Tooltip
-Info message
-*/
+--color-status-info-bg: #DBEAFE;
+/* پس‌زمینه اطلاعات */
+
+
+--color-status-warning: #F59E0B;
+/* هشدار */
+
+--color-status-warning-bg: #FEF3C7;
+/* پس‌زمینه هشدار */
 
 
 
 /*
 ==================================================
  DARK MODE VALUES
+ مقادیر مخصوص Dark Theme
 ==================================================
 */
 
 
---dark-surface-page: #0F172A;
+--dark-surface-page: #0B0F14;
+/* پس‌زمینه اصلی Dark */
 
---dark-surface-card: #1E293B;
+--dark-surface-card: #111827;
+/* کارت Dark */
 
---dark-surface-section: #111827;
+--dark-surface-section: #151B23;
+/* Section Dark */
+
+--dark-surface-elevated: #1A2230;
+/* عناصر Elevated در Dark */
 
 
 --dark-text-primary: #F8FAFC;
+/* متن اصلی Dark */
 
---dark-text-secondary: #E5E7EB;
+--dark-text-secondary: #CBD5E1;
+/* متن ثانویه Dark */
 
 --dark-text-muted: #94A3B8;
+/* متن کم‌اهمیت Dark */
+
+--dark-text-disabled: #64748B;
+/* متن Disabled Dark */
 
 
---dark-border-default: #334155;
+--dark-border-default: #263241;
+/* Border اصلی Dark */
+
+--dark-border-subtle: #1E293B;
+/* Border ملایم Dark */
+
+--dark-border-strong: #334155;
+/* Border پررنگ Dark */
+
+
+
+/*
+==================================================
+ DARK MARKET VALUES
+ رنگ‌های Market در Dark Mode
+==================================================
+*/
+
+
+--dark-market-positive-bg: #052E16;
+/* پس‌زمینه مثبت */
+
+--dark-market-negative-bg: #450A0A;
+/* پس‌زمینه منفی */
+
+--dark-alert-warning-bg: #451A03;
+/* پس‌زمینه هشدار */
+
+--dark-ai-soft: #2E1065;
+/* پس‌زمینه AI */
+
+--dark-analysis-soft: #083344;
+/* پس‌زمینه Analysis */
+
+--dark-gold-soft: #3A3218;
+/* پس‌زمینه Gold */
 
 
 
 }
 
 
-
-
-
 /*
 ==================================================
  TAILWIND v4 CONNECTION
- تبدیل Variable ها به کلاس Tailwind
+ تبدیل Variableها به کلاس‌های Tailwind
 ==================================================
 */
 
@@ -301,25 +526,180 @@ Info message
 @theme inline {
 
 
+/*
+==================================================
+ BRAND
+==================================================
+*/
+
+
 --color-brand-primary: var(--color-brand-primary);
 
 --color-brand-primary-hover:
 var(--color-brand-primary-hover);
 
+--color-brand-primary-active:
+var(--color-brand-primary-active);
+
 --color-brand-primary-soft:
 var(--color-brand-primary-soft);
 
+--color-brand-primary-subtle:
+var(--color-brand-primary-subtle);
+
+
+
+/*
+==================================================
+ GOLD
+==================================================
+*/
+
+
+--color-accent-gold:
+var(--color-accent-gold);
+
+--color-accent-gold-hover:
+var(--color-accent-gold-hover);
+
+--color-accent-gold-soft:
+var(--color-accent-gold-soft);
+
+--color-accent-gold-muted:
+var(--color-accent-gold-muted);
+
+
+
+/*
+==================================================
+ MARKET
+==================================================
+*/
 
 
 --color-market-positive:
 var(--color-market-positive);
 
+--color-market-positive-hover:
+var(--color-market-positive-hover);
+
+--color-market-positive-bg:
+var(--color-market-positive-bg);
+
+--color-market-positive-text:
+var(--color-market-positive-text);
+
+
 --color-market-negative:
 var(--color-market-negative);
 
---color-market-alert:
-var(--color-market-alert);
+--color-market-negative-hover:
+var(--color-market-negative-hover);
 
+--color-market-negative-bg:
+var(--color-market-negative-bg);
+
+--color-market-negative-text:
+var(--color-market-negative-text);
+
+
+--color-market-neutral:
+var(--color-market-neutral);
+
+--color-market-neutral-bg:
+var(--color-market-neutral-bg);
+
+
+
+/*
+==================================================
+ ALERT
+==================================================
+*/
+
+
+--color-alert-warning:
+var(--color-alert-warning);
+
+--color-alert-warning-hover:
+var(--color-alert-warning-hover);
+
+--color-alert-warning-bg:
+var(--color-alert-warning-bg);
+
+--color-alert-warning-text:
+var(--color-alert-warning-text);
+
+
+
+/*
+==================================================
+ AI
+==================================================
+*/
+
+
+--color-ai-primary:
+var(--color-ai-primary);
+
+--color-ai-hover:
+var(--color-ai-hover);
+
+--color-ai-soft:
+var(--color-ai-soft);
+
+--color-ai-text:
+var(--color-ai-text);
+
+
+
+/*
+==================================================
+ ANALYSIS
+==================================================
+*/
+
+
+--color-analysis-primary:
+var(--color-analysis-primary);
+
+--color-analysis-hover:
+var(--color-analysis-hover);
+
+--color-analysis-soft:
+var(--color-analysis-soft);
+
+--color-analysis-text:
+var(--color-analysis-text);
+
+
+
+/*
+==================================================
+ MULTI-MARKET
+==================================================
+*/
+
+
+--color-market-gold:
+var(--color-market-gold);
+
+--color-market-silver:
+var(--color-market-silver);
+
+--color-market-crypto:
+var(--color-market-crypto);
+
+--color-market-forex:
+var(--color-market-forex);
+
+
+
+/*
+==================================================
+ SURFACE
+==================================================
+*/
 
 
 --color-surface-page:
@@ -331,6 +711,19 @@ var(--color-surface-card);
 --color-surface-section:
 var(--color-surface-section);
 
+--color-surface-elevated:
+var(--color-surface-elevated);
+
+--color-surface-overlay:
+var(--color-surface-overlay);
+
+
+
+/*
+==================================================
+ TEXT
+==================================================
+*/
 
 
 --color-text-primary:
@@ -342,25 +735,68 @@ var(--color-text-secondary);
 --color-text-muted:
 var(--color-text-muted);
 
+--color-text-disabled:
+var(--color-text-disabled);
+
+--color-text-inverse:
+var(--color-text-inverse);
+
+
+
+/*
+==================================================
+ BORDER
+==================================================
+*/
 
 
 --color-border-default:
 var(--color-border-default);
 
+--color-border-subtle:
+var(--color-border-subtle);
+
+--color-border-strong:
+var(--color-border-strong);
+
+--color-border-focus:
+var(--color-border-focus);
+
+
+
+/*
+==================================================
+ STATUS
+==================================================
+*/
 
 
 --color-status-success:
 var(--color-status-success);
 
+--color-status-success-bg:
+var(--color-status-success-bg);
+
 --color-status-error:
 var(--color-status-error);
+
+--color-status-error-bg:
+var(--color-status-error-bg);
 
 --color-status-info:
 var(--color-status-info);
 
+--color-status-info-bg:
+var(--color-status-info-bg);
+
+--color-status-warning:
+var(--color-status-warning);
+
+--color-status-warning-bg:
+var(--color-status-warning-bg);
+
+
 }
-
-
 
 
 /*
@@ -368,50 +804,119 @@ var(--color-status-info);
  DARK MODE
  فعال شدن با class="dark"
 ==================================================
+
+استفاده:
+
+<html class="dark">
+
+یا
+
+<div class="dark">
+
+==================================================
 */
 
 
 .dark {
 
 
+/*
+==================================================
+ SURFACE
+==================================================
+*/
+
+
 --color-surface-page:
 var(--dark-surface-page);
-
 
 --color-surface-card:
 var(--dark-surface-card);
 
-
 --color-surface-section:
 var(--dark-surface-section);
 
-
-
---color-text-primary:
-var(--dark-text-primary);
-
-
---color-text-secondary:
-var(--dark-text-secondary);
-
-
---color-text-muted:
-var(--dark-text-muted);
-
-
-
---color-border-default:
-var(--dark-border-default);
-
-
-}
-
+--color-surface-elevated:
+var(--dark-surface-elevated);
 
 
 
 /*
 ==================================================
+ TEXT
+==================================================
+*/
+
+
+--color-text-primary:
+var(--dark-text-primary);
+
+--color-text-secondary:
+var(--dark-text-secondary);
+
+--color-text-muted:
+var(--dark-text-muted);
+
+--color-text-disabled:
+var(--dark-text-disabled);
+
+--color-text-inverse:
+#0B0F14;
+
+
+
+/*
+==================================================
+ BORDER
+==================================================
+*/
+
+
+--color-border-default:
+var(--dark-border-default);
+
+--color-border-subtle:
+var(--dark-border-subtle);
+
+--color-border-strong:
+var(--dark-border-strong);
+
+
+
+/*
+==================================================
+ MARKET / AI / ANALYSIS
+ Dark Backgrounds
+==================================================
+*/
+
+
+--color-market-positive-bg:
+var(--dark-market-positive-bg);
+
+--color-market-negative-bg:
+var(--dark-market-negative-bg);
+
+--color-alert-warning-bg:
+var(--dark-alert-warning-bg);
+
+--color-ai-soft:
+var(--dark-ai-soft);
+
+--color-analysis-soft:
+var(--dark-analysis-soft);
+
+--color-accent-gold-soft:
+var(--dark-gold-soft);
+
+
+}
+
+
+/*
+==================================================
  GLOBAL
+ تنظیمات پایه پروژه
 ==================================================
 */
 
@@ -421,9 +926,10 @@ body {
 background:
 var(--color-surface-page);
 
-
 color:
 var(--color-text-secondary);
 
+font-family:
+Arial, Helvetica, sans-serif;
 
 }
