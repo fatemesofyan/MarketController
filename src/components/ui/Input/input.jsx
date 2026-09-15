@@ -1,4 +1,3 @@
-
 export default function Input({
   type = "text",
   placeholder = "",
@@ -6,7 +5,17 @@ export default function Input({
   onChange,
   name,
   className = "",
+  ...props
 }) {
+  const baseClasses =
+    "w-full rounded-full py-3 pr-5 pl-5 " +
+    "bg-surface-card text-right text-text-primary placeholder:text-text-muted " +
+    "border border-border-default " +
+    "transition-all duration-200 " +
+    "focus:outline-none focus:border-brand-primary " +
+    "focus:ring-2 focus:ring-brand-primary/20 " +
+    "disabled:cursor-not-allowed disabled:opacity-60";
+
   return (
     <input
       type={type}
@@ -14,8 +23,8 @@ export default function Input({
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      className={`w-full px-5 py-4 rounded-full border border-background-muted dark:border-background-mutedDark  bg-background-default
-         dark:bg-background-dark text-primaryText-secondaryText-light dark:text-primaryText-secondaryText-dark focus:outline-none ${className}`}
+      className={`${baseClasses} ${className}`}
+      {...props}
     />
   );
 }

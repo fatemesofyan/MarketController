@@ -1,18 +1,27 @@
-
 export default function Button({
   children,
   onClick,
-  className,
+  className = "",
   type = "button",
-  variant = "primary", 
-  shape = "rounded-full", 
+  variant = "primary",
+  shape = "pill",
   ...props
 }) {
-    const baseClasses = "text-neutral text-base px-6 py-2 flex items-center  justify-center transition-transform duration-200";
+  const baseClasses =
+    "inline-flex items-center justify-center px-6 py-2 text-base font-medium transition-all duration-200 cursor-pointer";
 
   const variantClasses = {
-    primary: "bg-primary hover:bg-primaryHover",
-    secondary: "bg-background-default text-primary border-2 border-solid border-primary dark:bg-background-dark hover:text-primaryHover",
+    primary:
+      "bg-brand-primary text-white hover:bg-brand-primary-hover",
+
+    secondary:
+      "bg-surface-card text-brand-primary border-2 border-brand-primary hover:bg-brand-primary hover:text-white",
+
+    ghost:
+      "bg-transparent text-brand-primary hover:bg-surface-section",
+
+    outline:
+      "bg-transparent text-brand-primary border border-brand-primary hover:bg-brand-primary hover:text-white",
   };
 
   const shapeClasses = {
@@ -21,13 +30,13 @@ export default function Button({
     square: "rounded-none",
   };
 
-  const hoverScale = "hover:scale-105"
+  const hoverScale = "hover:scale-105";
 
   return (
     <button
       type={type}
       onClick={onClick}
-           className={`${baseClasses} ${variantClasses[variant]} ${shapeClasses[shape]} ${hoverScale} ${className}`}
+      className={`${baseClasses} ${variantClasses[variant]} ${shapeClasses[shape]} ${hoverScale} ${className}`}
       {...props}
     >
       {children}
