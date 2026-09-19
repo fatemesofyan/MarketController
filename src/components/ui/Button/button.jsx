@@ -8,20 +8,23 @@ export default function Button({
   ...props
 }) {
   const baseClasses =
-    "inline-flex items-center justify-center px-6 py-2 text-base font-medium transition-all duration-200 cursor-pointer";
+    "inline-flex items-center justify-center px-6 py-2"+
+     "text-base font-medium transition-all duration-200 cursor-pointer";
 
   const variantClasses = {
-    primary:
-      "bg-brand-primary text-white hover:bg-brand-primary-hover",
+    primary: "bg-brand-primary text-white hover:bg-brand-primary-hover",
 
     secondary:
-      "bg-surface-card text-brand-primary border-2 border-brand-primary hover:bg-brand-primary hover:text-white",
+      "bg-surface-card text-brand-primary "+
+      "border-2 border-brand-primary hover:bg-brand-primary hover:text-white",
+   
+      outline:
+      "bg-transparent text-brand-primary border-1 border-brand-primary"+
+       "hover:bg-surface-section",
 
     ghost:
-      "bg-transparent text-brand-primary hover:bg-surface-section",
-
-    outline:
-      "bg-transparent text-brand-primary border border-brand-primary hover:bg-brand-primary hover:text-white",
+      "bg-transparent text-brand-primary border border-brand-primary "+
+      "hover:bg-brand-primary hover:text-white",
   };
 
   const shapeClasses = {

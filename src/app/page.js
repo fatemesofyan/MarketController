@@ -1,10 +1,9 @@
-import Image from "next/image";
+import MarketAccessSection from "../components/home/marketAccessSection/MarketAccessSection";
 
 export default function Home() {
   return (
-    <div >
-      <main>
-      </main>
-    </div>
+    <>
+      <MarketAccessSection />
+    </>
   );
 }

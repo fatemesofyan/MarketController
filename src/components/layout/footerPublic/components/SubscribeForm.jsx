@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import Input from "../../../../ui/Input/input";
-import Button from "../../../../ui/Button/button";
+import Input from "../../../ui/Input/input";
+import Button from "../../../ui/Button/button";
 import SocialLinks from "./SocialLinks";
 
 
@@ -14,7 +14,7 @@ export default function SubscribeForm() {
         <SocialLinks/>
 
       <div className="flex w-full max-w-md flex-col">
-        <h2 className="text-sm font-semibold text-text-primary">
+        <h2 className="text-sm font-semibold text-text-secondary">
           با ثبت ایمیل، از جدیدترین رویدادها باخبر شوید.
         </h2>
 

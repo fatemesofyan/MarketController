@@ -1,25 +1,18 @@
-import React from "react";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 
 export default function DirectContact() {
   return (
     <div className="flex flex-col w-f gap-3">
-      {/* Address */}
       <div className="flex flex-row items-center justify-start gap-2">
-        <span className="flex w-6.25 shrink-0 items-center justify-end">
-          <FaMapMarkerAlt />
-        </span>
+        <FaMapMarkerAlt className="flex w-6.25 shrink-0 items-center justify-end" />
 
         <p className="text-text-secondary text-base leading-7">
           تهران، اشرفی اصفهانی
         </p>
       </div>
 
-      {/* Phone */}
       <div className="flex flex-row items-center justify-start gap-2">
-        <span className="flex w-6.25 shrink-0 items-center justify-end">
-          <FaPhone  />
-        </span>
+        <FaPhone className="flex w-6.25 shrink-0 items-center justify-end" />
 
         <a
           href="tel:0215531000"
@@ -29,11 +22,8 @@ export default function DirectContact() {
         </a>
       </div>
 
-      {/* Email */}
       <div className="flex flex-row items-center justify-start gap-2">
-        <span className="flex w-6.25 shrink-0 items-center justify-end">
-          <FaEnvelope />
-        </span>
+        <FaEnvelope className="flex w-6.25 shrink-0 items-center justify-end" />
 
         <a
           href="mailto:info@faraz.io"

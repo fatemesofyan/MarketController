@@ -1,47 +1,39 @@
-import React from "react";
 
-export default function AboutUs() {
-  const linkClass =
+export default function Legal() {
+
+    const linkClass =
     "text-sm text-text-muted transition-all duration-300 ease-out hover:text-brand-primary hover:scale-105 origin-right";
 
   return (
     <div className="flex flex-col gap-4">
-   <h3
-  className="
-    relative
+      <h3 className="
     pr-3
-    text-sm font-semibold text-text-primary
+    text-sm font-semibold text-text-secondary
     after:absolute
     after:right-0
     after:top-1/2
     after:h-4
     after:w-0.5
     after:-translate-y-1/2
-    after:rounded-full
     after:bg-brand-primary
-  "
->
-  درباره ما
-</h3>
+  ">
+        قوانین و مقررات
+      </h3>
+
       <nav className="flex flex-col gap-3">
         <a href="#" className={linkClass}>
-          درباره ما
+          شرایط استفاده
         </a>
 
         <a href="#" className={linkClass}>
- تماس با ما
-        </a>
-
-      
-        <a href="#" className={linkClass}>
-          ویژگی ها
+          حریم خصوصی
         </a>
 
         <a href="#" className={linkClass}>
-منابع داده   
+           امنیت و داده‌ها
         </a>
+       
       </nav>
     </div>
   );
 }
-

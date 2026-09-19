@@ -52,13 +52,14 @@ Indigo به عنوان رنگ اصلی برند انتخاب شده
 */
 
 
---color-brand-primary: #6366F1;
+--color-brand-primary: #3366FF;
 /* رنگ اصلی برند */
 
---color-brand-primary-hover: #4F46E5;
+
+--color-brand-primary-hover: #2952CC;
 /* Hover برای عناصر Primary */
 
---color-brand-primary-active: #4338CA;
+--color-brand-primary-active: #1F3D99;
 /* Active / Pressed */
 
 --color-brand-primary-soft: #EEF2FF;
@@ -314,10 +315,10 @@ Surface یعنی هر چیزی که روی صفحه قرار می‌گیرد:
 --color-surface-page: #F7F8FA;
 /* پس‌زمینه اصلی سایت */
 
---color-surface-card: #FFFFFF;
+--color-surface-card: #FFFFFF11;
 /* کارت‌ها */
 
---color-surface-section: #f2f3f6;
+--color-surface-section: #f2f4f8;
 /* بخش‌های بزرگ صفحه */
 
 --color-surface-elevated: #FFFFFF;
@@ -348,7 +349,7 @@ Muted
 */
 
 
---color-text-primary: #111827;
+--color-text-primary: #1F2937;
 /* تیترها و متن‌های اصلی */
 
 --color-text-secondary: #475569;
@@ -383,7 +384,7 @@ Border نباید بیش از حد پررنگ باشد.
 */
 
 
---color-border-default: #E2E8F0;
+--color-border-default: #cdcfd4;
 /* Border اصلی */
 
 --color-border-subtle: #F1F5F9;
@@ -392,7 +393,7 @@ Border نباید بیش از حد پررنگ باشد.
 --color-border-strong: #CBD5E1;
 /* Border پررنگ */
 
---color-border-focus: #6366F1;
+--color-border-focus: #3366FF;
 /* Focus Ring / Input Focus */
 
 
