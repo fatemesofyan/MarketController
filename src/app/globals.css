@@ -52,13 +52,14 @@ Indigo به عنوان رنگ اصلی برند انتخاب شده
 */
 
 
---color-brand-primary: #6366F1;
+--color-brand-primary: #3366FF;
 /* رنگ اصلی برند */
 
---color-brand-primary-hover: #4F46E5;
+
+--color-brand-primary-hover: #2952CC;
 /* Hover برای عناصر Primary */
 
---color-brand-primary-active: #4338CA;
+--color-brand-primary-active: #1F3D99;
 /* Active / Pressed */
 
 --color-brand-primary-soft: #EEF2FF;
@@ -314,14 +315,17 @@ Surface یعنی هر چیزی که روی صفحه قرار می‌گیرد:
 --color-surface-page: #F7F8FA;
 /* پس‌زمینه اصلی سایت */
 
---color-surface-card: #FFFFFF;
+--color-surface-card: #FFFFFF11;
 /* کارت‌ها */
 
---color-surface-section: #F1F3F5;
+--color-surface-section: #f2f4f8;
 /* بخش‌های بزرگ صفحه */
 
 --color-surface-elevated: #FFFFFF;
 /* عناصر شناور و Elevated */
+--color-surface-hover: #e9ece6;
+
+--color-surface-active: #9ea8b6;
 
 --color-surface-overlay: rgba(15, 23, 42, 0.08);
 /* Overlay */
@@ -348,7 +352,7 @@ Muted
 */
 
 
---color-text-primary: #111827;
+--color-text-primary: #1F2937;
 /* تیترها و متن‌های اصلی */
 
 --color-text-secondary: #475569;
@@ -383,7 +387,7 @@ Border نباید بیش از حد پررنگ باشد.
 */
 
 
---color-border-default: #E2E8F0;
+--color-border-default: #cdcfd4;
 /* Border اصلی */
 
 --color-border-subtle: #F1F5F9;
@@ -392,7 +396,7 @@ Border نباید بیش از حد پررنگ باشد.
 --color-border-strong: #CBD5E1;
 /* Border پررنگ */
 
---color-border-focus: #6366F1;
+--color-border-focus: #3366FF;
 /* Focus Ring / Input Focus */
 
 
@@ -466,7 +470,7 @@ Border نباید بیش از حد پررنگ باشد.
 --dark-text-secondary: #CBD5E1;
 /* متن ثانویه Dark */
 
---dark-text-muted: #94A3B8;
+--dark-text-muted: #939ca8;
 /* متن کم‌اهمیت Dark */
 
 --dark-text-disabled: #64748B;
@@ -714,6 +718,12 @@ var(--color-surface-section);
 --color-surface-elevated:
 var(--color-surface-elevated);
 
+--color-surface-hover:
+var(--color-surface-hover);
+
+--color-surface-active:
+var(--color-surface-active);
+
 --color-surface-overlay:
 var(--color-surface-overlay);
 
@@ -919,6 +929,14 @@ var(--dark-gold-soft);
  تنظیمات پایه پروژه
 ==================================================
 */
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/fonts/Vazirmatn[wght].woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 
 body {
@@ -929,7 +947,8 @@ var(--color-surface-page);
 color:
 var(--color-text-secondary);
 
-font-family:
-Arial, Helvetica, sans-serif;
+
+ font-family: 
+ "Vazirmatn", sans-serif;
 
 }
