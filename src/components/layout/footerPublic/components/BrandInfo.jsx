@@ -3,15 +3,15 @@ import DirectContact from "./DirectContact";
 
 export default function BrandInfo() {
   return (
- <div className="flex flex-col min-[700px]:max-lg:self-start">
-  <div className="flex w-full items-center justify-end gap-2 pb-2 " dir="ltr">
-    <h2 className="text-xl font-bold text-brand-primary mb-0">
+ <div className="flex flex-col mt-[-14] min-[700px]:max-lg:self-start">
+  <div className="flex w-full items-center justify-end gap-2 pb-1 " dir="ltr">
+    <h2 className="text-xl font-bold text-brand-primary m-0">
       قیمت یار
     </h2>
     <Logo />
   </div>
 
-  <p className="text-text-secondary max-w-80 text-base leading-7 pb-3">
+  <p className="font-normal text-text-secondary max-w-80 text-base leading-7 pb-1">
     تحلیل بازارهای مالی برای تصمیم‌گیری هوشمندانه‌تر
   </p>
 

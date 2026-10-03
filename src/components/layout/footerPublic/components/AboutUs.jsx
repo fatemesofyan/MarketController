@@ -7,6 +7,7 @@ export default function AboutUs() {
     <div className="flex flex-col gap-4">
    <h3
   className="
+  
     relative
     pr-3
     text-sm font-semibold text-text-secondary
@@ -21,7 +22,7 @@ export default function AboutUs() {
 >
   درباره ما
 </h3>
-      <nav className="flex flex-col gap-3">
+      <nav className="font-medium flex flex-col gap-3">
         <a href="#" className={linkClass}>
           درباره ما
         </a>

@@ -21,19 +21,26 @@ export default function TrustBadges() {
   `;
 
   return (
-    <div
-      className="
-        flex
-        items-center
-        justify-center
-        gap-4
-        border-t
-        border-border-default
-        py-6
-        mr-20
-        ml-20
-      "
-    >
+ <div
+    className="
+      relative
+      flex
+      items-center
+      justify-center
+      gap-4
+      mr-20
+      ml-20
+      pt-14
+      pb-8
+
+      before:absolute
+      before:top-5
+      before:left-0
+      before:right-0
+      before:border-t
+      before:border-border-default
+    "
+  >
       <div className={badgeClass}>
         <Image
           src="/images/enamadIcon.png"

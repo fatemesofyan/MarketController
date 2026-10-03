@@ -18,7 +18,7 @@ export default function CustomerSupport() {
     after:bg-brand-primary
   ">خدمات مشتریان</h3>
 
-      <nav className="flex flex-col gap-3">
+      <nav className="font-medium flex flex-col gap-3">
         <a href="#" className={linkClass}>
           سوالات متداول{" "}
         </a>

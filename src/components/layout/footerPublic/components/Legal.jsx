@@ -20,7 +20,7 @@ export default function Legal() {
         قوانین و مقررات
       </h3>
 
-      <nav className="flex flex-col gap-3">
+      <nav className="font-medium flex flex-col gap-3">
         <a href="#" className={linkClass}>
           شرایط استفاده
         </a>

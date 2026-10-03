@@ -6,7 +6,7 @@ export default function DirectContact() {
       <div className="flex flex-row items-center justify-start gap-2">
         <FaMapMarkerAlt className="flex w-6.25 shrink-0 items-center justify-end" />
 
-        <p className="text-text-secondary text-base leading-7">
+        <p className="font-normal text-text-secondary text-base leading-7">
           تهران، اشرفی اصفهانی
         </p>
       </div>
@@ -16,7 +16,7 @@ export default function DirectContact() {
 
         <a
           href="tel:0215531000"
-          className="text-text-secondary text-base leading-7 hover:text-brand-primary hover:scale-105"
+          className="font-normal text-text-secondary text-base leading-7 hover:text-brand-primary hover:scale-105"
         >
           021-5531000
         </a>
@@ -27,7 +27,7 @@ export default function DirectContact() {
 
         <a
           href="mailto:info@faraz.io"
-          className="text-text-secondary text-base leading-7 hover:text-brand-primary hover:scale-105"
+          className="font-normal text-text-secondary text-base leading-7 hover:text-brand-primary hover:scale-105"
         >
           info@faraz.io
         </a>

@@ -18,7 +18,7 @@ export default function AIResources() {
     after:bg-brand-primary
   ">هوش مصنوعی </h3>
 
-      <nav className="flex flex-col gap-3">
+      <nav className="font-medium flex flex-col gap-3">
         <a href="#" className={linkClass}>
           مستندات AI
         </a>

@@ -19,8 +19,7 @@ export default function Button({
       "border-2 border-brand-primary hover:bg-brand-primary hover:text-white",
    
       outline:
-      "bg-transparent text-brand-primary border-1 border-brand-primary"+
-       "hover:bg-surface-section",
+      `bg-transparent text-brand-primary border-1 border-brand-primary hover:bg-surface-hover`,
 
     ghost:
       "bg-transparent text-brand-primary border border-brand-primary "+

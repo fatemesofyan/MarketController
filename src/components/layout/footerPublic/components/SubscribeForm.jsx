@@ -25,7 +25,7 @@ export default function SubscribeForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             name="email"
-            className="pl-20 "
+            className="pl-2 "
           />
 
           <Button

@@ -64,9 +64,9 @@ export default function FooterPublic() {
 
     bg-size-[58px_58px]
 
-    mask-[radial-gradient(ellipse_at_center,black_18%,transparent_82%)]
+    mask-[radial-gradient(ellipse_at_center,black_20%,transparent_82%)]
 
-    [--grid-line:rgba(99,102,241,0.04)]
+    [--grid-line:rgba(99,102,241,0.02)]
   "
       />
 
@@ -83,9 +83,9 @@ export default function FooterPublic() {
 
     bg-size-[58px_58px]
 
-    mask-[radial-gradient(ellipse_at_center,black_25%,transparent_88%)]
+    mask-[radial-gradient(ellipse_at_center,black_20%,transparent_88%)]
 
-    [--grid-line:rgba(89,92,221,0.055)]
+    [--grid-line:rgba(89,92,221,0.035)]
   "
       />
 

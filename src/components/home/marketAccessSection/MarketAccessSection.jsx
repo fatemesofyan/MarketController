@@ -56,6 +56,7 @@ export default function MarketAccessSection() {
 
               <p
                 className="
+                font-normal
                   mx-auto
                   mt-5
                   max-w-xl
